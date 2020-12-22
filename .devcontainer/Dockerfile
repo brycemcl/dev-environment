@@ -46,19 +46,6 @@ COPY --from=digitalocean/doctl:latest /app/doctl /usr/local/bin/doctl
 RUN curl -sL https://run.linkerd.io/install | sh
 ENV PATH=$PATH:$HOME/.linkerd2/bin
 
-
-##kind
-#RUN export DEBIAN_FRONTEND=noninteractive && sudo apt-get update && apt-get -y install --no-install-recommends golang && \
-#    && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/
-#RUN go env -w GOPATH=/usr/local/go
-#RUN export PATH=$PATH:/usr/local/go/bin
-#ENV GO111MODULE="on"
-#RUN go get sigs.k8s.io/kind@v0.9.0 
-#USER vscode
-#ENV PATH=$PATH:/usr/local/go/bin
-
-
-
 ###lighthouselab ###
 #using apt-get
 USER root
@@ -154,7 +141,5 @@ ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]
 USER vscode
 
-
-##for prep for lighthouselabs
-RUN npm i -g javascripting 
+##install webpack
 RUN npm i -g webpack webpack-cli webpack-dev-server webpack-dev-middleware
