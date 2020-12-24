@@ -1,14 +1,14 @@
 {
   "configurations": [
-  {
-    "name": "Launch Program",
-    "program": "${file}",
-    "request": "launch",
-    "skipFiles": [
-      "<node_internals>/**"
-    ],
-    "type": "pwa-node",
-    "runtimeExecutable": "/usr/local/nvm/versions/node/v14.15.3/bin/node"
-  }
+    {
+      "name": "Launch Program",
+      "program": "${file}",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node",
+      "runtimeExecutable": "/usr/local/nvm/versions/node/v14.15.3/bin/node"
+    }
   ]
 }
