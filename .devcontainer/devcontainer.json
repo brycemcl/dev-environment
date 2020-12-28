@@ -27,7 +27,8 @@
 		"dbaeumer.vscode-eslint",
 		"CoenraadS.bracket-pair-colorizer-2",
 		"oderwat.indent-rainbow",
-		"ms-vsliveshare.vsliveshare"
+		"ms-vsliveshare.vsliveshare",
+		"ritwickdey.liveserver"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
