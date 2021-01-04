@@ -43,9 +43,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get -y instal
 
 COPY --from=digitalocean/doctl:latest /app/doctl /usr/local/bin/doctl
 #linkerd cli
-RUN curl -sL https://run.linkerd.io/install | sh
-ENV PATH=$PATH:$HOME/.linkerd2/bin
-
+USER vscode
+RUN curl -sL https://run.linkerd.io/install | sh && sudo mv /home/vscode/.linkerd2/bin/linkerd /usr/bin/linkerd
+USER root
 ###lighthouselab ###
 #using apt-get
 USER root
