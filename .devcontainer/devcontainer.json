@@ -15,7 +15,7 @@
 	//		"--env-file",
 	//		"./.devcontainer/secrets.env"
 	//	],
-	//  "postCreateCommand": "find . -type f -print0 | xargs -0 dos2unix -- && doctl auth init -t $doctl_auth && doctl kubernetes cluster kubeconfig save $doctl_kubernetes_cluster && doctl kubernetes cluster kubeconfig save $doctl_kubernetes_cluster",
+	"postCreateCommand": "find . -type f -print0 | xargs -0 dos2unix -- && doctl auth init -t $doctl_auth && doctl kubernetes cluster kubeconfig save $doctl_kubernetes_cluster && doctl kubernetes cluster kubeconfig save $doctl_kubernetes_cluster",
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"MS-vsliveshare.vsliveshare-pack",
